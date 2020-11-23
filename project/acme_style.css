@@ -1,0 +1,199 @@
+/*Style for the acme website, mobile first design*/
+
+body {
+	margin: 0;
+	/*line-height: 1.5;*/
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	
+	background-color: #333;
+	color: #fff;
+
+	text-align: center;
+}
+
+/*Settings for the image*/
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+h1, h2, h3{
+	margin: 0;
+	padding: 1em 0;
+	height: auto;
+	width: auto;
+}
+
+p{
+	margin: 0;
+	padding:1em 0;
+}
+
+/*Header*/
+.btn {
+	/*If it's only block then it will fill the whole width of
+	 * the page, so inline block is in between*/
+	display: inline-block;
+
+	background: #333;
+	color: #fff;
+	text-decoration: none;
+	padding: 1em 2em;
+	margin: 0.5em 0;
+	border: 1px solid #666;
+}
+
+.btn:hover{
+	background: #eaeaea;
+	color: #333;
+}
+
+/*Show case in header, to div image to add opacity*/
+#showcase{
+	min-height: 450px;
+	color: #fff;
+	text-align: center;
+}
+
+#showcase .bg-image{
+	position: absolute;
+	background: #333 url('https://www.pexels.com/photo/270404/download/?search_query=css&tracking_id=odtejjgc2yh');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	width: 100%;
+	height: 450px;
+
+	/*To put the image behind the text*/
+	z-index: -1;
+
+	opacity: 0.4;
+}
+
+#showcase h1{
+	padding-top: 100px;
+	padding-bottom: 0;
+}
+
+#showcase .content-wrap{
+	padding: 0 1.5em;
+}
+
+/*Section A */
+#section-a .content-wrap{
+	padding: 0 1.5em;
+}
+
+#section-a{
+	background: #eaeaea;
+	color: #333;
+	
+	padding-bottom: 2em;
+}
+
+/*Section A */
+
+#section-b{
+	padding: 2em 1em 1em;
+}
+
+#section-b ul{
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+
+#section-b li{
+	margin-bottom: 1em;
+	background: #fff;
+	color: #333;
+}
+
+.card-content{
+	padding: 1.5em;
+}
+
+/*Section C*/
+#section-c {
+	background:#fff;
+	color: #333;
+	padding: 2em;
+}
+
+/*Section D boxes*/
+
+#section-d .box{
+	padding: 2em;
+	color: #fff;
+}
+
+#section-d .box:first-child{
+	background: #2690D4;
+}
+
+/*Footer*/
+#main-footer{
+	background: #000;
+	color: #fff;
+
+	padding: 2em;
+	text-align: center;
+}
+
+#main-footer a{
+	color: #2690d4;
+	text-decoration: none;
+}
+
+/* this website is built for mobile first then it's scale up for
+ * desktop use min-width: 992px 
+ * Check out this website for screen references
+ * https://websiteedu.com/media-queries-for-mobile-and-tablets/
+ * */
+
+@media only screen and (min-width: 992px){
+	/*The grid*/
+	.grid{
+		display: grid;
+		grid-template-columns:1fr minmax(auto, 25em) minmax(auto, 25em) 1fr;
+	}
+
+	/*The content wrap*/
+	.content-wrap{
+		grid-column: 2/4;
+	}
+
+	/*Sections*/
+	#section-a .content-text{
+		columns: 2;
+	}
+	#section-a .content-text p {
+		padding-top: 0;
+	}
+
+	#section-b ul{
+		grid-column: 2/4;
+	}
+
+	.box{
+		grid-column: span 2;
+	}
+
+	#main-footer div{
+		grid-column: 2/4;
+	}
+
+	/*Flex box*/
+	#section-b ul{
+		display: flex;
+		justify-content:space-around;
+	}
+
+	#section-b li{
+		width: 30%;
+	}
+}

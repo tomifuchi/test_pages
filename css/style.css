@@ -1,0 +1,211 @@
+/*Customize the body first*/
+
+body {
+	background-color:#f4f4f4;
+	color:#555;
+
+	font: 1.1em Arial, Helvetica, sans-serif;
+	line-height: 1.6em;
+
+	text-align: center;
+
+	margin: 0;
+	min-height: 100%;
+}
+
+html{
+	height: 100%;	
+}
+
+h1, h2, h3{
+	/*Bridge the damn gap*/
+	margin:0;
+	padding: 0.5em 0;
+	
+	height: auto;
+	width: auto;
+}
+
+p {
+	padding: 1em;
+	margin: 0;
+}
+
+/*Header*/
+#header{
+	background-color: #CD5C5C;
+	color:#fff;
+}
+
+#header .content-wrap{
+	overflow:hidden;
+}
+
+/**Navigation bar button**/
+#navbar ul{
+	margin: 0;
+}
+
+#navbar .nav-btn{
+	display: inline-block;
+	text-decoration: none;
+	background: #333;
+	color: #eaeaea;
+
+	padding: 0.5em 1em;
+	margin: 0.25em;
+	border: 1px solid #000;
+	/*border-radius: 25px;*/
+}
+
+#navbar .nav-btn:hover{
+	
+	border: 1px solid #000;
+	background: #eaeaea;
+	color: #333;
+	/*
+	-webkit-text-stroke-width: 1.5px;
+	-webkit-text-stroke-color: #3d4c4c;
+	*/
+}
+
+#navbar ul{
+	padding: 0;
+	list-style: none;
+}
+
+#navbar li{
+	display:inline;
+}
+
+#navbar a{
+	text-decoration:none;
+	padding-right: 15px;
+}
+
+
+/*Main*/
+/**The showcase**/
+#key-visual{
+	min-height: 450px;
+}
+
+#key-visual .bg-image{
+	position: absolute;
+	background: #333 url('https://www.pexels.com/photo/574071/download/?search_query=programming&tracking_id=odtejjgc2yh');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	width:100%;
+	height: 450px;
+
+	z-index:-1;
+
+	opacity: 0.7;
+}
+
+#key-visual .content-wrap{
+	text-align: center;
+	color: #fff;
+}
+
+#key-visual .content-title{
+	padding-top: 130px;
+}
+
+#key-visual .btn{
+	display: inline-block;
+	text-decoration: none;
+	color:#fff;
+	background: #333;
+
+	padding: 0.5em 1em;
+	margin: 1.25em;
+	border: 1px solid #000;
+	/*border-radius: 25px;*/
+}
+
+#key-visual .btn:hover{
+	background: #eaeaea;
+	color: #333;
+}
+/**Project**/
+#demo-intro{
+	padding: 1em 0;	
+}
+
+#acme{
+	min-height: 150px;
+}
+
+#acme .bg-image{
+	position: absolute;
+	background: #333 url('https://www.pexels.com/photo/270348/download/?search_query=programming&tracking_id=odtejjgc2yh');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	width:100%;
+	height: 150px;
+
+	z-index:-1;
+
+	opacity: 0.7;
+}
+
+#acme .content-wrap{
+	text-align: center;
+	color: #fff;
+}
+
+#acme .content-title{
+}
+
+#acme .btn{
+	display: inline-block;
+	text-decoration: none;
+	color:#fff;
+	background: #333;
+
+	padding: 0.5em 1em;
+	margin: 1.25em;
+	border: 1px solid #000;
+	/*border-radius: 25px;*/
+}
+
+#acme .btn:hover{
+	background: #eaeaea;
+	color: #333;
+}
+
+/*Footer*/ #footer {
+	background: #333;
+	color: #fff;
+
+	padding: 1.5em;
+	text-align: center;
+}
+
+/*Grid layout*/
+
+.grid-outer {
+	display: grid;
+	grid-template-columns: 1fr minmax(auto,25em) minmax(auto,25em) 1fr;
+}
+
+.grid-outer #header{
+	grid-column: 1/5;
+}
+
+.grid-outer #main{
+	grid-column: 1/5;
+}
+
+.grid-outer #footer{
+	grid-column: 1/5;
+}
+
+.content-wrap{
+	grid-column: 2/4;
+}
